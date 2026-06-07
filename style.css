@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+
+.Cabecalho {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0c6dff;
+    color: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.Cabecalho h2 {
+    color: white;
+    padding: 20px 20px 0 20px; 
+}
+
+
+.btn-primary {
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block; 
+}
+
+
+.primeira_dobra {
+    padding: 90px 0px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2); 
+    color: white;
+    font-size: .75rem; 
+    font-weight: 700;
+    letter-spacing: .06em; 
+    text-transform: uppercase;
+    padding: .25rem .75rem; 
+    border-radius: 999px;
+    margin-bottom: .9rem;
+}
+
+.primeira_dobra h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.primeira_dobra p {
+    max-width: 700px;
+    margin: auto;
+    color: #ffffff;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+
+.primeiradobra-buttons{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*---------------------------------------------*/
+
+.texto_biografia {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;  
+    color: #000000;
+    padding: 90px 0;
+    text-align: center;  
+}
+
+.gray {
+    background: #f9fafb;
+      padding: 90px 0;
+
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #000000;
+    max-width: 1000px;
+    margin: 0 auto;  
+    text-align: center;  
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+
+/*---------------------------------------------*/
+
+ /* 1. Elemento externo que garante a centralização no seu site */
+    /* 1. Alinhamento Externo (Wrapper) */
+.banner-wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente no site */
+    align-items: center;     /* Alinha verticalmente se houver espaço */
+    width: 100%;             /* Ocupa toda a largura disponível da página */
+    padding: 40px 0px;       /* Espaçamento externo para o banner não colar nas bordas */
+    box-sizing: border-box;
+}
+
+/* 2. O Banner em si */
+.banner-container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    background-color: #1565C0;
+    color: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.banner-column {
+    flex: 1;
+    padding: 35px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Linhas divisórias entre as colunas */
+.banner-column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+
+.banner-text {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+}
+
+/* 3. Responsividade para Celulares */
+@media (max-width: 768px) {
+    .banner-wrapper {
+        padding: 20px 15px; /* Diminui o espaçamento em telas pequenas */
+    }
+    
+    .banner-container {
+        flex-direction: column; /* Empilha as colunas verticalmente no celular */
+    }
+
+    .banner-column {
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    /* Esconde as linhas divisórias no celular, pois as colunas ficam empilhadas */
+    .banner-column:not(:last-child)::after {
+        display: none;
+    }
+}
+
+
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.steps div{
+    background:white;
+    border:1px solid #e5e7eb;
+    padding:50px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.stats h3{
+    font-size:2rem;
+}
+
+.cta{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:100px 0;
+}
+
+.cta p{
+    margin:20px 0 35px;
+    color:#d1d5db;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    border-top:1px solid #e5e7eb;
+    color:#6b7280;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
