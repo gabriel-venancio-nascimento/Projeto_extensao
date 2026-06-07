@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
     margin: 0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif ;
     color: #1f2937;
     background: #ffffff;
     line-height: 1.7;
@@ -13,27 +15,33 @@ body {
 
 
 .Cabecalho {
-    position: relative;
-    top: 0;
-    left: 0;
+
+    height: 500px;
     width: 100%;
     z-index: 1000;
-    background-color: #0c6dff;
     color: white;
     border-bottom: 1px solid #e5e7eb;
-}
+    background:linear-gradient(rgba(0, 0, 128,0.5),
+                rgba(0, 0, 128,0.5)),  url(img/11543937-fundo-azul-escuro-abstrato-com-efeito-de-luz-brilhante-diagonal-vetor.jpg ) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
 
-.Cabecalho h2 {
+}
+ 
+
+.Cabecalho h1 {
     color: white;
     padding: 20px 20px 0 20px; 
+    font-family: Istok Web;
 }
 
 
 .btn-primary {
-    background: #111827;
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    padding: 14px 24px;
+    padding: 12px 24px;
     border-radius: 10px;
     font-weight: 600;
     display: inline-block; 
@@ -64,6 +72,7 @@ body {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .primeira_dobra p {
@@ -89,7 +98,7 @@ body {
     max-width: 800px;
     margin: 0 auto;  
     color: #000000;
-    padding: 90px 0;
+    padding: 50px;
     text-align: center;  
 }
 
@@ -99,17 +108,17 @@ body {
 
 }
 
-.section-title {
+.Biografia-titulo {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.section-title h1 {
+.Biografia-titulo h1 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.section-title p {
+.Biografia-titulo p {
     color: #000000;
     max-width: 1000px;
     margin: 0 auto;  
@@ -125,117 +134,371 @@ body {
 
 /*---------------------------------------------*/
 
- /* 1. Elemento externo que garante a centralização no seu site */
-    /* 1. Alinhamento Externo (Wrapper) */
 .banner-wrapper {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente no site */
-    align-items: center;     /* Alinha verticalmente se houver espaço */
-    width: 100%;             /* Ocupa toda a largura disponível da página */
-    padding: 40px 0px;       /* Espaçamento externo para o banner não colar nas bordas */
+    justify-content: center; 
+    align-items: center;     
+    width: 90%;             
     box-sizing: border-box;
 }
 
-/* 2. O Banner em si */
 .banner-container {
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    background-color: #1565C0;
+    background-color: #000080;
     color: #ffffff;
-    border-radius: 12px;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-.banner-column {
+.banner-Informativo {
     flex: 1;
-    padding: 35px 40px;
+    padding: 35px 40px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     box-sizing: border-box;
+   
 }
 
-/* Linhas divisórias entre as colunas */
-.banner-column:not(:last-child)::after {
+
+.banner-Informativo:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
     top: 20%;
-    height: 60%;
+    height: 70%;
     width: 1px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: white;
 }
 
-.banner-number {
+.titulo-informativo {
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 6px;
     white-space: nowrap;
 }
 
-.banner-text {
+.texto-informativo {
     font-size: 0.9rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.4;
 }
 
-/* 3. Responsividade para Celulares */
-@media (max-width: 768px) {
+@media (max-width: 768px){
     .banner-wrapper {
-        padding: 20px 15px; /* Diminui o espaçamento em telas pequenas */
+        padding: 20px 15px; 
     }
     
     .banner-container {
-        flex-direction: column; /* Empilha as colunas verticalmente no celular */
+        flex-direction: column; 
     }
-
-    .banner-column {
+    .banner-Informativo {
         align-items: center;
         text-align: center;
         padding: 30px 20px;
     }
 
-    /* Esconde as linhas divisórias no celular, pois as colunas ficam empilhadas */
-    .banner-column:not(:last-child)::after {
+    .banner-Informativo:not(:last-child)::after {
         display: none;
     }
 }
 
+/*---------------------------------------------*/
 
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
+.dicas-seguranca {
+    padding: 100px 8%;
+    background: #f8fafc;
 }
 
-.steps div{
-    background:white;
-    border:1px solid #e5e7eb;
-    padding:50px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:600;
+.cabecalho-seguranca {
+    max-width: 700px;
+    margin-bottom: 50px;
 }
 
-.stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+.etiqueta-protecao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #e8f1ff;
+    color: #2563eb;
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    margin-bottom: 20px;
 }
 
-.stats h3{
-    font-size:2rem;
+.cabecalho-seguranca h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+
+    margin-bottom: 15px;
 }
+
+.cabecalho-seguranca p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.grade-dicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.cartao-dica {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+}
+
+.cartao-dica:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.08);
+}
+
+.numero-dica {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cartao-dica h3 {
+    color: #111827;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.cartao-dica p {
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+
+    .dicas-seguranca {
+        padding: 70px 6%;
+    }
+
+    .cabecalho-seguranca h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/*---------------------------------------------*/
+
+.secao-emergencia {
+    padding: 50px 8%;
+    background: #f8fafc;
+}
+
+.cabecalho-emergencia {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.etiqueta-emergencia {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: #eef2ff;
+    color: #2563eb;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.cabecalho-emergencia h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.cabecalho-emergencia p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.grade-emergencia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.cartao-emergencia {
+    display: flex;
+    gap: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    padding: 25px;
+
+    transition: 0.3s ease;
+}
+
+.cartao-emergencia:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+
+    border-color: #ef4444;
+}
+
+.numero-emergencia {
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #dc2626;
+
+    min-width: 60px;
+}
+
+.conteudo-emergencia h3 {
+    font-size: 1.3rem;
+    color: #111827;
+
+    margin-bottom: 10px;
+}
+
+.conteudo-emergencia p {
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+
+    .secao-emergencia {
+        padding: 70px 6%;
+    }
+
+    .cabecalho-emergencia h2 {
+        font-size: 2rem;
+    }
+
+    .cartao-emergencia {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .numero-emergencia {
+        min-width: auto;
+    }
+
+}
+
+/*---------------------------------------------*/
+
+.cartilha{
+    width: 100%; 
+    padding: 100px 8%;
+    background: #f8fafc;
+}    
+
+.cabecalho-cartilha {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.etiqueta-catilha{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #e8f1ff;
+    color: #2563eb;
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.cabecalho-cartilha h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+.cabecalho-cartilha p {
+    color: #6b7280;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.vizulizacao-cartilha{
+    justify-content: center; 
+    align-items: center; 
+    padding: 100px 8%;
+
+}
+
+/*---------------------------------------------*/
 
 .cta{
-    background:#111827;
+    background:#000080;
     color:white;
     text-align:center;
     padding:100px 0;
