@@ -486,27 +486,6 @@ body {
     margin-bottom: 20px;
 }
 
-.cabecalho-cartilha h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #111827;
-
-    margin-bottom: 15px;
-}
-
-.cabecalho-cartilha p {
-    color: #6b7280;
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-.vizualizacao-cartilha{
-   
-    justify-content: center;
-    align-items: center;
-    padding: 100px;
-}
-
 /*---------------------------------------------*/
 
 .cta{
